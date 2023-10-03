@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            background-color: silver;
+        }
+
+        .textos {
+            background-color: rgb(17, 119, 102);
+            padding: 10px;
+            width: min(50%, 10px);
+        }
+
+        .cadastro {
+            background-color: rgb(133, 255, 235);
+            width: calc(100% - 20px);
+            padding: 5px;
+        }
+
+        div {
+            border: 1px solid white;
+        }
+
+        input[type=text],
+        input[type=number],
+        input[type=email] {
+            width: calc(100% - 15px);
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .containerBotoes {
+            display: flex;
+            justify-content: center;
+            margin-top: 5px;
+        }
+
+        .botao {
+            margin: 0px 5px 0px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    
+        <div class="textos">
+            paragrafos
+        </div>
+        <div class="cadastro">
+            <form action="" method="get">
+                <a href="./att.html">voltar</a>  
+                <fieldset>
+                    <legend>Dados pessoais</legend>
+                    <label for="nome">Informe nome</label>
+                <input type="text" id="nome" placeholder="Informe nome">
+
+                <label for="idade">Informe idade</label>
+                <input type="number" id="idade" placeholder="Informe idade">
+
+                <label for="email">Informe email</label>
+                <input type="email" id="email" placeholder="Informe email">
+                 </fieldset>
+
+                <div>
+                    <label for="estadoCivil">Informe estado civil: </label>
+                    <input type="radio" name="ec" id="casado" value="Casado" />
+                    <label for="casado">Casado</label>
+                    <input type="radio" name="ec" id="solteiro" value="Solteiro" 
+                    checked
+                    />
+                    <label for="solteiro">Solteiro</label>
+                </div>
+                               
+                <div>
+                    <label for="uf">Selecione seu estado: </label>
+                    <select id="uf">
+                        <option>-</option>
+                         
+                         
+                         <option value="AC">Acre</option>
+                         <option value="AL">Alagoas</option>
+                         <option value="AP">Amapá</option>
+                         <option value="AM">Amazonas</option>
+                         <option value="BA">Bahia</option>
+                         <option value="CE">Ceará</option>
+                         <option value="ES">Espírito Santo</option>
+                         <option value="GO">Goiás</option>
+                         <option value="MA">Maranhão</option>
+                         <option value="MT">Mato Grosso</option>
+                         <option value="MS">Mato Grosso do Sul</option>
+                         <option value="MG">Minas Gerais</option>
+                         <option value="PA">Pará</option>
+                         <option value="PB">Paraíba</option>
+                         <option value="PR">Paraná</option>
+                         <option value="PE">Pernambuco</option>
+                         <option value="PI">Piauí</option>
+                         <option value="RJ">Rio de Janeiro</option>
+                         <option value="RN">Rio Grande do Norte</option>
+                         <option value="RS">Rio Grande do Sul</option>
+                         <option value="RO">Rondônia</option>
+                         <option value="RR">Roraima</option>
+                         <option value="SC">Santa Catarina</option>
+                         <option value="SP">São Paulo</option>
+                         <option value="SE">Sergipe</option>
+                         <option value="TO">Tocantins</option>
+                         
+
+                                                  
+                    </select>
+                </div>
+                <div>
+                    <label for="uf">Selecione o destino de viagem: </label>
+                    <select id="uf">
+                        <option>-</option>
+                         
+                         
+                         <option value="AC">Acre</option>
+                         <option value="AL">Alagoas</option>
+                         <option value="AP">Amapá</option>
+                         <option value="AM">Amazonas</option>
+                         <option value="BA">Bahia</option>
+                         <option value="CE">Ceará</option>
+                         <option value="ES">Espírito Santo</option>
+                         <option value="GO">Goiás</option>
+                         <option value="MA">Maranhão</option>
+                         <option value="MT">Mato Grosso</option>
+                         <option value="MS">Mato Grosso do Sul</option>
+                         <option value="MG">Minas Gerais</option>
+                         <option value="PA">Pará</option>
+                         <option value="PB">Paraíba</option>
+                         <option value="PR">Paraná</option>
+                         <option value="PE">Pernambuco</option>
+                         <option value="PI">Piauí</option>
+                         <option value="RJ">Rio de Janeiro</option>
+                         <option value="RN">Rio Grande do Norte</option>
+                         <option value="RS">Rio Grande do Sul</option>
+                         <option value="RO">Rondônia</option>
+                         <option value="RR">Roraima</option>
+                         <option value="SC">Santa Catarina</option>
+                         <option value="SP">São Paulo</option>
+                         <option value="SE">Sergipe</option>
+                         <option value="TO">Tocantins</option>
+                         
+
+                                                  
+                    </select>
+                </div>
+                 
+                <div class="containerBotoes">
+                    <input class="botao" type="submit" value="Gravar">
+                    <input class="botao" type="reset" value="Cancelar">
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>

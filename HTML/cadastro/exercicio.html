@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <div>
+         <label for="nome">Informe nome</label>
+         <input type="text" id="nome" placeholder="Informe nome" >
+         <button onclick="inserir()">Inserir</button><br>
+
+         <label for="email">Informe email</label>
+         <input type="email" id="email" placeholder="nome@gmail.com" >
+         <button onclick="inserir()">Inserir</button><br>
+
+         <label for="fone">Informe telefone</label>
+         <input type="tel" id="telefone" placeholder="(xx) xxxxx-xxxx" >
+          <button onclick="inserir()">Inserir</button><br>
+        
+        </div>
+        <ul>
+            <!--Listar os dados do array cadastro-->
+        </ul>
+        <hr>
+        <button onclick="carregar()">Carregar</button>
+        
+        <script>
+            const cadastro = ["nome", "email", "telefone"];        
+                        
+            function inserir(){
+                let novonome = document.getElementById('nome')
+    
+                if(novonome.value == ''){
+                    alert("É preciso informar o nome")
+                    novonome.focus()
+                    return
+                }
+    
+            }
+    
+            function carregar(){
+                let i = 0
+                let itens = ''
+                while(i < cadasro.length){
+                   itens += `<li>${cadasro[i]}</li>`
+                   i++  
+                } 
+                document.getElementsByTagName("ul")[0].innerHTML = itens
+            }
+    
+            function nomeJaExiste(item){
+                let size = cadasro.length
+                for(let i = 0; i < size ; i++){
+                    if(cadasro[i] == item){
+                        return true
+                    }
+                }
+                return false
+            }
+        </script>
+      
+    </body>
+
+</html>

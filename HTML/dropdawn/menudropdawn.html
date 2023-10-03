@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style-type: none;
+        }
+
+        li{
+            display: inline;
+        }
+
+        a{
+            text-decoration: none;
+            cursor: default;
+        }
+
+        .dropdown{
+           position: relative; 
+           display: inline-block;
+           background-color: aqua;
+        }
+
+        .dropdown:hover .drop-content{
+            display: block;   
+        }
+
+        .drop-content{
+            position: absolute;
+            display: none;
+            width: 100px;
+        }
+
+        .drop-content a{
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">home</a></li>
+            <li class="dropdown">
+                <a href="#">Cadastros</a>
+                <div class="drop-content">
+                    <a href="#">Contatos</a>
+                    <a href="#">Locais</a>
+                    <a href="#">Compromissos</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Consultas</a>
+                <div class="drop-content">
+                    <a href="#">Contatos</a>
+                    <a href="#">Locais</a>
+                    <a href="#">Compromissos</a>
+                </div>
+            </li>
+           <!--
+             <li><a href="#">Consultas</a></li>-->
+            <li><a href="#">Sobre</a></li> 
+        </ul>
+    </nav>
+    <main>
+        <iframe src="boasvindas.html" frameborder="1" name="main"></iframe>
+    </main>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=text],
+        input[type=number] {
+            width: calc(100% - 20px);
+            margin: 0px 0px 10px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="#">
+            <label for="nome">Informe nome</label>
+            <input type="text" placeholder="informe nome" id="nome">
+
+            <label for="idade">Informe idade</label>
+            <input type="number" placeholder="informe idade" id="idade">
+
+            <div>
+                <label>Informe estado civil</label>
+                <input type="radio" name="ec" id="casado" />
+                <label for="casado">Casado</label>
+
+                <input type="radio" name="ec" id="solteiro" />
+                <label for="solteiro">Solteiro</label>
+            </div>
+            <div>
+                <label for="">Preferencias</label>
+                <input type="checkbox" name="preferencia" id="livro" value="livros">
+                <label for="livro">Livros</label>
+
+                <input type="checkbox" name="preferencia" id="viagem" value="viagem">
+                <label for="livro">Viagem</label>
+
+                <input type="checkbox" name="preferencia" id="cozinha" value="Cozinha">
+                <label for="livro">Cozinha</label>
+            </div>
+
+            <input onclick="validaDados()" type="button" value="Gravar">
+        </form>
+    </div>
+    <script>
+        function validaDados() {
+            let vnome = document.getElementById('nome')
+            if (vnome.value == '') {
+                alert('Informe nome')
+                vnome.focus()
+                return
+            }
+
+            let vIdade = document.getElementById('idade')
+            if (vIdade.value == '') {
+                alert('informe idade')
+                vIdade.focus()
+                return
+            }
+
+            let ec = document.getElementsByName('ec')
+            /*alert(ec[0].checked)
+            alert(ec[1].checked)*/
+            if (ec[0].checked != true && ec[1].checked != true) {
+                alert('informe estado civil')
+                return
+            }
+
+            let pref = document.getElementsByName('preferencia')
+            //alert(pref.length)
+            let opcoes = ''
+            for (let i = 0; i < pref.length; i++) {
+                if (pref[i].checked) {
+                    opcoes = opcoes + ' - ' + pref[i].value
+                }
+            }
+            alert(opcoes)
+
+            alert('Dados salvo com sucesso')
+        }
+    </script>
+</body>
+
+</html>
+

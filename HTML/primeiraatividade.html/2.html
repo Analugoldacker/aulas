@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            background-color: silver;
+        }
+
+        .textos {
+            background-color: blueviolet;
+            padding: 10px;
+            width: min(50%, 10px);
+        }
+
+        .cadastro {
+            background-color: lightblue;
+            width: calc(100% - 20px);
+            padding: 5px;
+        }
+
+        div {
+            border: 1px solid white;
+        }
+
+        input[type=text],
+        input[type=email] {
+            width: calc(100% - 15px);
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .containerBotoes {
+            display: flex;
+            justify-content: center;
+            margin-top: 5px;
+        }
+
+        .botao {
+            margin: 0px 5px 0px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    
+        <div class="textos">
+            paragrafos
+        </div>
+        <div class="cadastro">
+            <form action="" method="get">
+                <a href="./att.html">voltar</a>  
+                <fieldset>
+                    <legend>Dados pessoais</legend>
+                    <label for="nome">Informe nome</label>
+                <input type="text" id="nome" placeholder="Informe nome">
+
+                <label for="email">Informe email</label>
+                <input type="email" id="email" placeholder="Informe email">
+                 </fieldset>
+
+                <div>
+                    <label for="estadoCivil">Informe estado civil: </label>
+                    <input type="radio" name="ec" id="casado" value="Casado" />
+                    <label for="casado">Casado</label>
+                    <input type="radio" name="ec" id="solteiro" value="Solteiro" 
+                    checked
+                    />
+                    <label for="solteiro">Solteiro</label>
+                </div>
+
+                <div>
+                    <label for="">Informe suas preferencias: </label>
+                    <input type="checkbox" id="livro"> <label for="livro">Livro</label>
+
+                    <input type="checkbox" id="viajar"> <label for="viajar">Viajar</label>
+                </div>
+                
+                <div>
+                    <label for="uf">Selecione seu estado: </label>
+                    <select id="uf">
+                        <option>-</option>
+                         <option value="RS">Rio Grande do Sul</option>
+                         <option value="SC">Santa Catarina</option>
+                         <option value="PR">Paraná</option>
+                    </select>
+                </div>
+                 <div>
+                    <Label>Comentários</Label>
+                    <textarea></textarea>
+                 </div>
+                 
+
+                <div class="containerBotoes">
+                    <input class="botao" type="submit" value="Gravar">
+                    <input class="botao" type="reset" value="Cancelar">
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>

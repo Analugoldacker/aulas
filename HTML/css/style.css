@@ -1,0 +1,24 @@
+
+ul{
+            
+ list-style-type: none;
+ padding: 15px;
+ text-align: center;
+ background-color: rgb(184, 133, 211);
+           
+}
+
+li{
+
+ display: inline;
+
+}
+
+a{
+
+ text-decoration: none;
+ cursor: default;
+ 
+}
+
+       

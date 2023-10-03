@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: calc(100px + 15px);
+        }
+
+        a{
+            text-decoration: none;           
+        }
+
+        li{            
+            background-color: aquamarine;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .container{
+            display: flex;
+        }
+        aside{
+            background-color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <ul>
+                <li><a href="./pages/home.html" target="main">Home</a></li>
+                <li><a href="./pages/contatos.html" target="main">Contatos</a></li>
+                <li><a href="./pages/locais.html" target="main">locais</a></li>
+                <li><a href="./pages/compromissos.html" target="main">compromissos</li>
+                <li><a href="./pages/sobre.html" target="main">Sobre</a></li>
+            </ul>
+        </aside>
+        <main>
+            <iframe src="home.html" frameborder="1" name="main"></iframe>
+        </main>
+    </div>
+    
+</body>
+</html>
