@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <style>
+        .blue{
+            background-color: blue;
+        }
+
+        .red{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <button>clique aqui</button>
+    <button>clique aqui novamente</button>
+    <button id="btgravar">selecione pelo id</button>
+    <button class="blue">selecionar pela classe css</button>
+
+    <hr>
+    <button id="setText">settext</button>
+    <p class="blue"></p>
+    <hr>
+    <input type="text" placeholder="Informe seu nome">
+
+    <p>primeiro paragrafo</p>
+    <p>segundo paragrafo</p>
+
+    <hr>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.Optio iste deserunt adipisci! 
+            Odit magnam inventore repellendus praesentium, optio voluptas. 
+            Distinctio consequatur sint perferendis ipsa deleniti ut ipsam voluptatem, tempore modi.
+        </p>
+
+        <hr>
+        <button id="trocadeClasse">Troca classe</button>
+        <button id="toogleClass">Toogle Class</button>
+        <button id="lerClasse">Ler Classe</button>
+        <button id="attrClasse">Atribuir Classe</button>
+
+    </div>
+
+    <script>
+        $(document),ready(() => 
+        {
+            //let ps = $('p')
+            let ps = document.getElementsByTagName('p')
+            console.log(ps[0].innerHTML) 
+        })
+
+        /*
+        $('button').click(()=>
+        {
+            alert('ola')
+        })
+        */
+
+        $('#btgravar').click(() =>
+        {
+            alert('salvando dados...')
+        })
+
+        $('.blue').click(() => 
+        {
+            alert('Classe blue')
+        })
+
+        $('p').click(() =>
+        {
+            alert(item.target.innerHTML)
+        })
+
+        $('#setText').click(() =>
+        {
+          //$('p.blue').text('<b>Ola</b> mundo!') 
+            $('p.blue').html('<b>Ola</b> mundo!') 
+        })
+
+        $('input').focus(() =>
+        {
+            $('input').val('Eita lasqueira')
+            $('input').css('background-color','red')
+        })
+
+        $('input').blur(() => 
+        {
+            alert($('input').val())
+            $('input').css('background-color','silver')
+        })
+
+        $('div p').css({'color':'red','text-align':'justify', 'font-family':'fantasy'})
+          
+        /*$('#trocaClasse').click(()=>
+        {
+         $('#trocaClasse').addClass('blue')
+        })
+
+        $('#trocaClasse').dblclick(()=>
+        {
+         $('#trocaClasse').addClass('red')
+        })
+        */
+
+        $('#trocaClasse').mousedown(() =>
+        {
+            $('#trocaClasse').addClass('blue')
+        })
+
+        $('#trocaClasse').mouseup(() =>
+        {
+            $('#trocaClasse').addClass('red')
+        })
+           
+        $('#toogleClass').click(() =>
+        {
+            $('#toogleClass').toggleClass('blue')
+        })
+
+        $('#lerClasse').click(() =>
+        {
+          //alert($('#toogleClass').attr('class'))
+          alert(document.getElementById(toogleClass).getAttribute('class'))
+        })
+
+        $('#attrClasse').click(() =>
+        {
+         //$('#lerClasse').attr('class','red')
+           document.getElementById('lerClasse').setAttribute('class','red')
+        })
+
+    </script>
+</body>
+</html>
