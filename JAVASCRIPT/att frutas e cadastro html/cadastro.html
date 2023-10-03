@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="fruta">Informe nome</label>
+        <input type="text" id="fruta" placeholder="Informe nome" >
+        <button onclick="inserir()">Inserir</button>
+    </div>
+    <ul>
+      <!--Listar os dados do array de fruta-->
+    </ul>
+    <hr>
+    <button onclick="carregar()">Carregar</button>
+    <script>
+        var pessoa = {nome:"maria"}
+        console.log(pessoa)
+        console.log(pessoa.nome)
+
+        function inserir(){
+            let novaFruta = document.getElementById('fruta')
+
+            if(novaFruta.value == ''){
+                alert("É preciso informar o nome da fruta")
+                novaFruta.focus()
+                return
+            }
+
+            fruits.push(novaFruta.value)
+            novaFruta.value = ''
+        }
+
+        function carregar(){
+            let i = 0
+            let itens = ''
+            while(i < fruits.length){
+               itens += `<li>${fruits[i]}</li>`
+               i++  
+            } 
+            document.getElementsByTagName("ul")[0].innerHTML = itens
+        }
+    </script>
+</body>
+</html>

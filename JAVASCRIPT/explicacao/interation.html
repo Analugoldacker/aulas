@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <button onclick="formaForeach()">foreach</button>
+        <button onclick="formaMap()">Map</button>
+        <button onclick="formaFliter()">Fliter</button>
+        <button onclick="formaReducer()">Reducer</button>
+
+        <script>
+          //var numeros = [10,20,30,40,50]
+          
+            var numeros = [10,11,30,35,14]   
+            
+            function formaReducer()
+            {
+                let total = 0
+                total = numeros.reduce((acumulador, n) => 
+                {
+                    /*na primerira interaçao tem o 
+                    valor da primeira posição do array
+                    */
+                   
+                    console.log(acumulador)
+
+                    /*acrescenta o proximo valor ao anterior*/
+                    return acumulador + n
+
+                })
+                console.log(total)
+            }
+
+            function formaFliter()
+            {
+                let numerosPares = numeros.filter((n) => 
+                {
+                    return n % 2 == 0
+                })
+                numerosPares.forEach((n) => console.log(n))
+            }
+
+            function formaForeach()
+            {
+                numeros.forEach((n) => 
+                {
+                    console.log(n)
+                    console.log(n * 10)
+                })
+            }
+
+            function formaMap()
+            {
+                let numerosPares = numeros.map((n) => 
+                {
+                    if(n % 2 == 0)
+                    {
+                        return n
+                    }
+                    return n * 3
+                })
+                numeros.forEach((n) => console.log(n))
+                console.log("\n")
+                numerosPares.forEach((n) => console.log(n))
+            }
+
+        </script>
+
+    </body>
+</html>

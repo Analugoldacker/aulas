@@ -1,0 +1,6 @@
+document.write("<header>")
+document.write("<div id='titulo'>")        
+document.write("<h1 style='font-family: 50px;'>Analú Goldacker</h1>")
+document.write(" <img class='logo' src='./imagens/20230915_144703_0001-removebg-preview.png' width='200px' height='200px' alt='Logo'>")
+document.write("</div>")
+document.write("</header>")

@@ -1,0 +1,6 @@
+document.write("<nav>")
+document.write("<a href='index.html'>Home</a>")
+document.write("<a href='cadastro.html'>Cadastros</a>")
+document.write("<a href='consultas.html'>Consultas</a>")
+document.write("<a href='#'>About</a>")
+document.write("</nav>")
