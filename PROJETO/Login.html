@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            z-index: -1;
+            margin: 0px;
+            background-color: rgb(7, 5, 5);
+            /* background-image:url(fotos/spaghetti-2931846_1280.jpg) ; */
+            background-repeat:no-repeat;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        input{
+        margin: 1em;
+        height: 2em;
+        border-radius: 15px;
+        padding-left: 6em;
+        background-color: rgba(240, 248, 255, 0.205);
+    }
+        
+        input::placeholder{
+        
+        color: rgb(240, 248, 255);
+    }
+        
+        #login{
+            
+            align-items: center;
+            color: aliceblue;
+            background-color: rgba(0, 0, 0, 0.521);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            position: relative;
+            z-index: 2;
+            margin-top: -45em;
+            width: 450px;
+            height: 400px;
+            margin-left: 10em; 
+            margin-bottom: 2.6em; 
+            
+            padding-bottom: 180px;
+            border-radius: 15px;
+        }
+        #container{
+            overflow:hidden;
+            position: relative;
+            z-index: 3;
+        }
+        button{
+            width: 8em;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.637);
+        }
+        /* img{
+            margin-top: 1%;
+            
+        } */
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="fotos/spaghetti-1932466_1280.jpg" alt="" width="100px" height="100px">
+        <div id="login">
+            <h2>login</h2>
+            <input type="text" placeholder="infrome email">
+            <input type="password" placeholder="infrome senha">
+            <div id="botao">
+                <button>Login</button>
+                <button>registrar</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
