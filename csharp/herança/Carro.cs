@@ -4,16 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesafioListas
+namespace herança
 {
-    class Carro
+    class Carro : Veiculo
     {
-        public string Placa { get; set; }
         public string Modelo { get; set; }
 
-        public string ToString()
+        public void ronco()
         {
-            return $"Placa: {Placa}  Modelo:{Modelo}";
+            Console.WriteLine("ronco do carro");
         }
     }
 }
