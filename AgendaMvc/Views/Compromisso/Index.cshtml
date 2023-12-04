@@ -1,0 +1,34 @@
+﻿@model IEnumerable<AgendaMvc.Models.Compromisso>
+@{
+    ViewData["title"] = "Compromissos";
+}
+
+<h2>@ViewData["title"]</h2>
+
+@Html.ActionLink("Create","Create")
+
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Id)</th>
+            <th>@Html.DisplayNameFor(model => model.Descricao)</th>
+            <th>@Html.DisplayNameFor(model => model.Data)</th>
+            <th>@Html.DisplayNameFor(model => model.Contato.Email)</th>
+            <th>@Html.DisplayNameFor(model => model.Local.Nome)</th>
+        </tr>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@Html.DisplayFor(model => item.Id)</td>
+                <td>@Html.DisplayFor(model => item.Descricao)</td>
+                <td>@Html.DisplayFor(model => item.Data)</td>
+                <td>@Html.DisplayFor(model => item.Contato.Email)</td>
+                <td>@Html.DisplayFor(model => item.Local.Nome)</td>
+            </tr>
+            }
+        </tbody>
+    </thead>
+</table>
