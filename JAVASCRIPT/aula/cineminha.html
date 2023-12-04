@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <style>
+        .livre {
+            background-color: green;
+        }
+
+        .ocupado {
+            background-color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <label for="">Numero de cadeiras</label>
+    <input type="number" id="qtdeCadeiras">
+    <input type="button" value="Gerar sala">
+    <hr>
+    <div id="sala">
+        <!--gerar cadeiras via script-->
+    </div>
+    <hr>
+    <div>
+        <p>Livres: <span id="tlivres"></span></p>
+        <p>Ocupados: <span id="tocupados"></span></p>
+    </div>
+
+    <script>
+        $(document).ready(() => {
+            $('[type=button]').click(() => {
+                let qtde = $('#qtdeCadeiras').val()
+                let cadeiras = ''
+                //criamos as cadeiras
+                for (let i = 1; i <= qtde; i++) {
+                    cadeiras += `<button>${i}</button>`
+                }
+                //colocamos as cadeiras na sala
+                $('#sala').html(cadeiras)
+                $('button').addClass('livre')
+
+                //mostrar cadeiras livres
+                // $('#tlivres').html(qtde)
+                $('#tlivres').html($('button.livre').length)
+                $('#tocupados').html('0')
+
+                $('button').click((item) => {
+                   /* if($(item.target).attr('class') == 'livre'){
+                        $(item.target).attr('class','ocupado')
+                    }else{
+                        $(item.target).attr('class','livre')  
+                    }*/
+                    //usando operador ternaria
+                    $(item.target).attr('class') == 'livre' ? $(item.target).attr('class','ocupado') : $(item.target).attr('class','livre') 
+
+                    //atualizar livres/ocupados
+                    $('#tlivres').html($('button.livre').length)
+                    $('#tocupados').html($('button.ocupado').length)
+                })
+            }) //rotina do click criar cadeiras
+
+        })
+    </script>
+</body>
+
+</html>

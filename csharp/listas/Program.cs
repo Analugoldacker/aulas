@@ -1,12 +1,12 @@
 ﻿namespace listas
 {
-    internal class Program
+    internal class PROGRAMAM
     {
         static void Main(string[] args)
         {
 
             //explicacao();
-              atividade1();
+            atividade1();
 
             Console.ReadKey();
 
@@ -55,56 +55,84 @@
                 Console.WriteLine(list[i]);/*forma indexada*/
 
         }
-      
         static void atividade1()
         {
-            List<Carro> carros= new List<Carro>();
-
+            List<Carro> carros = new List<Carro>();
             while (true)
             {
-                Console.WriteLine("Informe uma opçao:");
-                Console.WriteLine("1- Inserir");
-                Console.WriteLine("2- Editar");
-                Console.WriteLine("3- Excuir");
-                Console.WriteLine("4- Consultar Todos");
-                Console.WriteLine("5- Consultar Pelo Id");
+                Console.WriteLine("Informe uma opção: ");
+                Console.WriteLine("1 - Inserir ");
+                Console.WriteLine("2 - Editar");
+                Console.WriteLine("3 - Excluir");
+                Console.WriteLine("4 - Consultar todos ");
+                Console.WriteLine("5 - Consulta pelo ID");
 
                 int opcao = Convert.ToInt32(Console.ReadLine());
 
                 switch (opcao)
                 {
-                    case 1:Carro carroProcurando = getCarro(carros, "abc-1234");
-                        break;
+                    case 1:
+                        {
+                            Carro carroProcurado = getCarro(carros, "LZZ-1976");
+                            if (carroProcurado != null)
+                            {
+                                Console.WriteLine("Carro já cadastrado");
+                            }
+                            else
+                            {
+                                carros.Add(new Carro() { Placa = "LZZ-1976", Modelo = "Fuscão" });
+                            }
 
-                    case 2:Console.WriteLine("editar");                        
-                        break;
+                            break;
+                        }
+                    case 2:
+                        {
+                            Carro carroProcurado = getCarro(carros, "LZZ-1976");
+                            if (carroProcurado == null)
+                            {
+                                Console.WriteLine("Carro não está cadastrado");
+                            }
+                            else
+                            {
+                                carroProcurado.Modelo = "fusquinha";
+                            }
 
-                    case 3:Console.WriteLine("excluir");                       
+                            break;
+                        }
+                    case 3:
+                        Console.WriteLine("Excluindo");
                         break;
-
-                    case 4:Console.WriteLine("consultar todos");
+                    case 4:
+                        {
+                            foreach (Carro car in carros)
+                            {
+                                Console.WriteLine(car.ToString());
+                            }
+                            break;
+                        }
+                    case 5:
+                        Console.WriteLine("Consultando pelo ID");
                         break;
-
-                    case 5:Console.WriteLine("consultar pelo id");                        
+                    default:
+                        Console.WriteLine("Opção inválida");
                         break;
-
-                    default:Console.WriteLine("opcao invalida");
-                        break;
-
                 }
+
                 //Console.Clear();
             }
-            /*INSERRIR*/
-            /*Carro carros = new Carro();
-
-            Console.WriteLine("Infome Placa:");
-            Console.WriteLine("Placa: ");
-            carros.Placa = Console.ReadLine();
-
-            Console.WriteLine("Infome :");
-            Console.WriteLine("Placa: ");
-            carros.Placa = Console.ReadLine();*/
         }
-        static Carro getCarro(string placa,  )
+        static Carro getCarro(List<Carro> origem, string placa)
+        {
+            Carro carro = null;
+            foreach (Carro car in origem)
+            {
+                if (car.Placa.Equals(placa))
+                {
+                    carro = car;
+                }
+            }
+            return carro;
+
+        }
     }
 }

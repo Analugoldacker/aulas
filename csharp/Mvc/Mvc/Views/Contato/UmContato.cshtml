@@ -1,0 +1,17 @@
+﻿@model MVC.Models.Contato
+
+@{
+    ViewData["Title"] = "Um Contato";
+    ViewData["txt "] = "Um Contato";
+   
+}
+<h1>@ViewData["txt"]</h1>
+<div>
+    <span class="fw-bold">@Html.DisplayNameFor(model => model.Id):</span> <span class="fw-bold">@Html.DisplayNameFor(model => model.Nome):</span>
+    <span class="text-danger">@Html.DisplayFor(model=> model.Id)</span>
+    
+    <span class="text-danger">@Html.DisplayFor(model=> model.Nome)</span>
+    <span class="fw-bold">@Html.DisplayNameFor(model => model.Email):</span>
+    <span class="text-danger">@Html.DisplayFor(model=> model.Email)</span>
+</div>
+
